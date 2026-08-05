@@ -105,5 +105,5 @@ If you have any questions, please contact us in the Kotlin
 [#touchlab-tools](https://kotlinlang.slack.com/archives/CTJB58X7X) channel. To join the Kotlin
 Community Slack, [request access here](http://slack.kotlinlang.org/).
 
-For direct assistance, please [reach out to Touchlab](https://go.touchlab.co/contactkamp) to discuss
+For direct assistance, please [reach out to Touchlab](https://touchlab.co/contact-us) to discuss
 support options.
