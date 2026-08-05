@@ -52,13 +52,13 @@ jobs:
         run: ./gradlew assembleIosSimulatorArm64 --no-daemon
 
       - name: Run tests
-        run: ./gradlew :shared:iosX64Test
+        run: ./gradlew :iosX64Test
 
       - name: Build iOS App
         uses: sersoft-gmbh/xcodebuild-action@v1
         with:
-          project: ios/KaMPKitiOS.xcodeproj
-          scheme: KaMPKitiOS
+          project: ios/IOS_PROJ.xcodeproj
+          scheme: PROJ_SCHEME
           sdk: iphoneos
           configuration: Debug
           action: build
