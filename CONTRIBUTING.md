@@ -39,9 +39,8 @@ file genuinely needs a formatting pass, keep it in its own commit or its own pul
 
 ### What CI checks
 
-Every pull request runs the project's build, tests, and lint checks on GitHub Actions. Pull requests
-are expected to be green before review; if a check fails for a reason unrelated to your change, note
-it in the pull request rather than forcing it through.
+Every pull request runs the project's build, tests, and lint checks on GitHub Actions. CI runs by outside
+contributors must be approved by Touchlab developers before they run.
 
 Releases are cut by the Touchlab team, not by CI on merge. Please don't bump version numbers or
 touch publishing configuration in a contribution unless you've been asked to.
