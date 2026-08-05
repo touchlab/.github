@@ -1,45 +1,110 @@
 # How to contribute
 
-In the first place, thank you for thinking about contributing to PROJECT_ID!
-Here you can find a set of guidelines for pitching in.
+First of all, thank you for thinking about contributing! Here you'll find a set of guidelines
+that apply to all Touchlab open source projects.
+
+This is the default guide shared across Touchlab repositories. Individual repos may ship their own
+`CONTRIBUTING.md`, which takes precedence over this one.
 
 ## Running the codebase
 
-### Building and Running Tests locally
+### Building and running tests locally
 
-<!-- A section on how to build the project, as well as how to run tests, Linting, anything else important. It can give an overview of what tests do if needed -->
+The repo's `README.md` is the source of truth for how to build it, which toolchain versions it
+expects, and any setup a build needs. Whatever those commands are, we expect the same things of a
+contribution:
 
-### Lint
+* **Build it and run the tests before opening a pull request.** Don't rely on CI to find out whether
+  your change compiles.
+* **Use the build tooling the repo ships with** — the checked-in wrapper, lockfile, or pinned
+  toolchain version — rather than whatever is installed globally on your machine. Version drift
+  produces failures that have nothing to do with your change.
+* **Cover every platform the project targets**, not just the one you develop on. Some targets need
+  specific hardware or SDKs (for example, Apple targets need a Mac with Xcode). If you can't run one
+  locally, run what you can and say in the pull request which platforms you didn't verify, so a
+  reviewer knows what to watch.
+* If a setup step isn't documented and you get stuck, open an issue or ask in Slack. A missing setup
+  step is a bug in our docs, not a failure on your part.
 
-<!-- A section on how linting is used in the project. This should be a standard across repos so we shouldn't need any changes -->
+### Formatting and static analysis
 
-We use Lint and KtLint in our projects to ensure the Kotlin code guidelines are met. Please, check that your suggested changes follow these guidelines as well by running `./gradlew :ktlintCheck` or you can use [KtLint plugin](https://plugins.jetbrains.com/plugin/15057-ktlint-unofficial-) for IntelliJ IDEA or Android Studio. Some existing files may not conform with this standard, please be careful about refactoring them as part of your merge request, with many refactored lines the actual changes may get lost when reviewing.
+Match the conventions the project already uses. Most of our repos configure a formatter and static
+analysis as part of the build, and the same checks run in CI — run them locally before you push, and
+prefer letting the configured tool format your code over formatting it by hand.
+
+Some existing files may not conform to the current standard. Please be careful about reformatting
+them as part of your change — when a diff contains many reformatted lines, the actual change gets
+lost during review. Don't reformat, rename, or clean up code you aren't otherwise touching. If a
+file genuinely needs a formatting pass, keep it in its own commit or its own pull request.
 
 ### What CI checks
 
-<!-- A section on what CI checks. Should explain what is run when, such as pushing a new version as well as running tests and checks.  -->
+Every pull request runs the project's build, tests, and lint checks on GitHub Actions. Pull requests
+are expected to be green before review; if a check fails for a reason unrelated to your change, note
+it in the pull request rather than forcing it through.
+
+Releases are cut by the Touchlab team, not by CI on merge. Please don't bump version numbers or
+touch publishing configuration in a contribution unless you've been asked to.
 
 ## Improving the codebase
 
 ### Creating an issue
 
-If you have stumbled across a bug or have a good feature suggestion / enhancement, you can create an [issue](https://github.com/touchlab/REPO/issues), but please don't mistake it for the general KMM helpline. You can get answers for general questions in Slack. Please, fill in carefully all of the info the **issue template** suggests. It will save us time when investigating the problem. There might be a bit of a delay until we get to your ticket, so we ask for your patience.
+If you've found a bug, please open an issue from the repository's
+**Issues** tab and fill in the **issue template** carefully. The more complete your response, the easier
+it is for us to address the issue and the less likely it is to stall.
 
-### Submit a merge request
+Please don't use issues as a general Kotlin or KMP helpline; general questions are better asked in
+Slack (see [Questions](#questions)). There may be a delay before we get to your ticket, so we ask
+for your patience.
 
-If you wish to participate in submitting code changes, to start with, you can look for issues tagged with **good first issue** (if there is none look for an issue that looks adequate to your skills).
-In case you feel like making significant changes or adding features, please discuss with the team first before you start working on it, to ensure we are on the same page.
-When your fix / feature is ready, create a merge request using the **pull request template** and fill in as much information as possible.
-All merge requests need to pass a code review from our team member, and subsequently they are approved or rejected with a reason. It might take some time before we get to your merge request, but don't worry, it didn't get lost.
+### Submitting a pull request
 
-## Response Times
+If you'd like to contribute code, a good place to start is issues tagged **help wanted**. If
+there are none open, pick an issue that looks like a reasonable fit for your experience with the
+project.
+
+**Every pull request must have an associated issue.** 
+
+If you're proposing significant changes or new features
+please open the issue before commiting time/effort to the change so that we can discuss whether it's
+something likely to be merged.
+
+When your fix or feature is ready:
+
+* Open the pull request against the repository's default branch and fill in the
+  **pull request template** with as much detail as you can.
+* Keep the change focused. One concern per pull request; unrelated cleanups are easier to accept
+  separately.
+* Include tests for behavior you add or fix, where the project has a test suite for that area.
+* Mention any platform you couldn't build or test locally.
+
+All pull requests need a code review from a Touchlab team member, and are then approved, sent back
+with comments, or declined with a reason. It might take some time before we get to it. Contributions are accepted under the same license as the project.
+
+## Response times
 
 While we're proud of our open source projects, we only have so much time to contribute to them.
+These projects are maintained alongside our client work, so treat the following as our intent rather
+than a guarantee:
 
-<!--  what response times to expect. Set Touchlab servicing expectations depending on the repo priority -->
+* We aim to acknowledge new issues and pull requests within about a week.
+* Security reports and regressions in a recent release get looked at first.
+* Quiet periods happen. If something has gone a couple of weeks without a response, a polite bump on
+  the issue or a message in Slack is welcome and won't annoy us.
+* Some repositories are maintained more actively than others. If a repo is in low-maintenance or
+  archived mode, its `README.md` will say so — for those, expect responses to be slower and
+  larger changes unlikely to be merged.
+
+If your team depends on one of these projects and needs a firmer commitment,
+[reach out to Touchlab](https://go.touchlab.co/contactkamp) to discuss support options.
 
 ## Questions
 
-If you have any questions, please, contact us in the Kotlin [Community Slack](https://kotlinlang.slack.com/) in the [touchlab-support](https://kotlinlang.slack.com/archives/CTJB58X7X) channel. To join the Kotlin Community Slack, [request access here](http://slack.kotlinlang.org/).
+If you have any questions, please contact us in the Kotlin
+[Community Slack](https://kotlinlang.slack.com/) in the
+[#touchlab-tools](https://kotlinlang.slack.com/archives/CTJB58X7X) channel. To join the Kotlin
+Community Slack, [request access here](http://slack.kotlinlang.org/).
 
-For direct assistance, please [reach out to Touchlab](https://touchlab.co/contact-us/) to discuss support options.
+For direct assistance, please [reach out to Touchlab](https://go.touchlab.co/contactkamp) to discuss
+support options.
