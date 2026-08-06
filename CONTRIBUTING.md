@@ -66,7 +66,7 @@ project.
 **Every pull request must have an associated issue.** 
 
 If you're proposing significant changes or new features
-please open the issue before commiting time/effort to the change so that we can discuss whether it's
+please open a discussion before committing time/effort to the change so that we can discuss whether it's
 something likely to be merged.
 
 When your fix or feature is ready:
