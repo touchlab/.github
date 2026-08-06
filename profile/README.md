@@ -28,15 +28,15 @@ Our open-source tooling is pinned below. New to KMP? Make sure you check out: **
 
 ## Getting help
 
-- **Bugs and feature requests** — open an issue on the relevant repo.
+- **Bugs and Defects** — Open an issue on the relevant repo.
 - **Questions and "how do I…"** — Reach out in [#touchlab-tools](https://kotlinlang.slack.com/archives/CTJB58X7X) ([request access](http://slack.kotlinlang.org/)).
 
-We read everything. Response times are vary by project.
+Feature requests should be filed as a discussion, not an issue. We read everything. Response times vary by project.
 
 ## Work with us
 
-We help mobile teams build native apps faster. That means architecture reviews and audits, getting AI into your workflow with the expert context it
-needs to be trusted, KMP migrations, and training teams adopting KMP for the first
+We help mobile teams build native apps confidently and efficiently. That means Touchlab developers joining your team, doing architecture reviews and audits, getting AI into your workflow with the expert context it
+needs to be trusted, helping with KMP migrations, and training teams adopting KMP for the first
 time.
 
 - **Commercial support for our libraries:** [Touchlab Pro](https://touchlab.co/tlpro)
