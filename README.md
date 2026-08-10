@@ -15,8 +15,11 @@ Details on creating your own templates can be found in github docs.
 [Using templates to encourage useful issues and pull requests](https://docs.github.com/en/github/building-a-strong-community/using-templates-to-encourage-useful-issues-and-pull-requests)
 
 
+Bug reports and feature requests use [issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms)
+(YAML) rather than markdown templates, so key fields can be marked required. Blank issues are
+disabled in `.github/ISSUE_TEMPLATE/config.yml`, which also lists contact links pointing questions
+at Slack instead of the issue tracker.
+
 ### Potential Changes
 
 * Add `SECURITY.md`
-* `.github/ISSUE_TEMPLATE/config.yml` — turn off blank issues (or keep them) and add contact links to Slack / docs so people don’t file “how do I…?” as bugs.
-* Stronger templates - Issue forms (YAML) instead of markdown for bug/feature — required fields for Kotlin/Gradle versions, targets, repro link.

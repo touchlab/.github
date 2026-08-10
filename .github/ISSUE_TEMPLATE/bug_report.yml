@@ -1,0 +1,135 @@
+name: Bug report
+description: Report something that isn't working the way it should
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a report. The more of this you can fill in, the
+        faster we can act on it. If you're
+        not sure whether this is a bug or a usage question, ask in the
+        [#touchlab-tools](https://kotlinlang.slack.com/archives/CTJB58X7X) channel of the
+        Kotlin Community Slack first.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched the existing issues (including closed ones) and didn't find this one.
+          required: true
+        - label: I'm using a currently released version of this project.
+          required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What goes wrong, in a sentence or two. A crash, a warning, incorrect output, etc.
+      placeholder: Calling foo() on iOS throws instead of returning null.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: >
+        How can we make this happen on our machines? A link to a minimal sample project is the
+        single most useful thing you can give us.
+      placeholder: |
+        1. Configure the library with ...
+        2. Call ...
+        3. Observe ...
+
+        Sample project: https://github.com/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What you thought would happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happens instead.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Affected platforms
+      description: Check every platform you've seen this on. Leave unchecked if you don't know.
+      options:
+        - label: Android
+        - label: iOS
+        - label: macOS
+        - label: watchOS / tvOS
+        - label: JVM
+        - label: JS / Wasm
+        - label: Linux / Windows (native)
+        - label: Not platform specific
+        - label: Build / Gradle plugin only
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which version of this project are you using?
+      placeholder: "1.2.3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: >
+        Anything about your setup that might matter — build tool and version, Kotlin version, JDK, Xcode version,
+        host OS, whether this was a real device or a simulator/emulator, and the relevant parts of
+        your build configuration.
+      placeholder: |
+        - Build tool: Gradle 8.11
+        - Kotlin version: 2.2.0
+        - JDK: 17
+        - Xcode: 16.2
+        - Host OS: macOS 15.3 (Apple silicon)
+        - Device: iPhone 16 simulator, iOS 18.2
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, stack traces, or build output
+      description: >
+        Paste the error message and stack trace if there is one. For build failures, output from a
+        run with stack traces enabled is much more useful than the summary line.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: possible-fix
+    attributes:
+      label: Possible cause or fix
+      description: Any hunch about why this happens is welcome, even if you're not sure.
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: >
+        Drag images or videos in here — especially helpful for UI issues. Also a good place for
+        workarounds you've found.
+    validations:
+      required: false
