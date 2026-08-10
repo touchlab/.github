@@ -5,11 +5,6 @@ contact_links:
     about: >
       Ask in the #touchlab-tools channel of the Kotlin Community Slack. Please don't open issues for
       general Kotlin or KMP questions. Request Slack access at https://slack.kotlinlang.org.
-  - name: Commercial support
-    url: https://go.touchlab.co/contactkamp
-    about: >
-      If your team depends on this project and needs a firmer commitment than our open source
-      response times, get in touch.
   - name: Feature Requests
     url: https://github.com/touchlab/.github/discussions/new?category=ideas
     about: >
