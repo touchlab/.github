@@ -10,3 +10,6 @@ contact_links:
     about: >
       If your team depends on this project and needs a firmer commitment than our open source
       response times, get in touch.
+  - name: Feature Requests
+    about: >
+      We ask that you submit feature requests as discussion topics and reserve issues for reporting defects
