@@ -1,0 +1,81 @@
+name: Documentation
+description: Report incorrect, unclear, or missing documentation.
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found something wrong or missing in the docs, README, or samples? Let us know below.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched the existing issues (including closed ones) and didn't find this one.
+          required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Where is the problem?
+      description: Link to the page, README section, or file. If it doesn't exist yet, say so.
+      placeholder: https://github.com/touchlab/.../README.md#installation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of issue is this?
+      options:
+        - Incorrect or outdated information
+        - Unclear or confusing explanation
+        - Missing documentation
+        - Broken link, sample, or code snippet
+        - Typo or formatting
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      description: >
+        Quote the text if you can, and explain what's incorrect, unclear, or missing. For "unclear",
+        it helps to describe what you assumed before reading closer, and where that assumption fell
+        apart.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: >
+        If you have a specific rewrite in mind, put it here. Rough ideas are fine too — we'll refine
+        the wording.
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that helps, e.g. the version of the project this applies to.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Would you be willing to send a pull request?
+      description: >
+        Entirely optional, and saying no won't affect whether we take the report.
+      options:
+        - "Yes, I'd like to open a pull request"
+        - "Maybe, with some guidance"
+        - "No, I'm just reporting it"
+    validations:
+      required: false
