@@ -63,8 +63,6 @@ If you'd like to contribute code, a good place to start is issues tagged **help 
 there are none open, pick an issue that looks like a reasonable fit for your experience with the
 project.
 
-**Every pull request must have an associated issue.** 
-
 If you're proposing significant changes or new features
 please open a discussion before committing time/effort to the change so that we can discuss whether it's
 something likely to be merged.
@@ -73,6 +71,7 @@ When your fix or feature is ready:
 
 * Open the pull request against the repository's default branch and fill in the
   **pull request template** with as much detail as you can.
+* Reference the issue/discussion number
 * Keep the change focused. One concern per pull request; unrelated cleanups are easier to accept
   separately.
 * Include tests for behavior you add or fix, where the project has a test suite for that area.
