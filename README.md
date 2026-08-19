@@ -8,13 +8,6 @@
   <strong>Shared community defaults for Touchlab's open source repositories.</strong>
 </p>
 
-<p align="center">
-  <a href="https://touchlab.co">🌐 Website</a> ·
-  <a href="https://touchlab.co/blog">✍️ Blog</a> ·
-  <a href="https://kotlinlang.slack.com/archives/CTJB58X7X">💬 #touchlab-tools</a> ·
-  <a href="https://touchlab.co/contact-us">🛟 Support</a>
-</p>
-
 ---
 
 ## What this repo is
@@ -25,8 +18,7 @@ a link in an issue template, a code of conduct, or a contributing guide, this is
 lives.
 
 Looking for our tooling? Start with the pinned repositories on the
-[Touchlab organization page](https://github.com/touchlab) — **SKIE** (idiomatic Swift APIs from your
-Kotlin) and **xcode-kotlin** (debug Kotlin directly in Xcode) are the usual entry points.
+[Touchlab organization page](https://github.com/touchlab).
 
 ## What's inside
 
@@ -38,11 +30,6 @@ Kotlin) and **xcode-kotlin** (debug Kotlin directly in Xcode) are the usual entr
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) | Bug report, feature request, and documentation forms, plus the contact links shown when you open a new issue. |
 | [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md) | The default pull request checklist. |
 | [`profile/README.md`](profile/README.md) | The landing page shown on the [Touchlab organization profile](https://github.com/touchlab). |
-
-Bug reports, feature requests, and documentation issues use
-[issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms)
-so the fields we need to reproduce a problem are required rather than optional. Blank issues are
-turned off, and the "new issue" screen points general questions at Slack instead of the tracker.
 
 Any repository can override any of these by shipping its own copy — a project's own
 `CONTRIBUTING.md` or issue templates always take precedence over the defaults here. See
