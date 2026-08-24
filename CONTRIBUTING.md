@@ -25,8 +25,7 @@ ask that feature requests be submitted to the repositories Feature Request (or I
 before starting a PR and instead of through the repositories issue list.
 
 Submitting feature requests as discussions allows us prioritize requests using discussions upvote system. 
-Requests with a lot of community support are more likely to be considered. It also provides a distinction 
-between defects (issues) which are concretely fixable, and enhancements which may be valid but not prioritized.
+Requests with a lot of community support are more likely to be considered. It also provides spaces for defects (issues) which are concretely fixable, and enhancements which may be valid but not prioritized.
 
 ### Submitting a pull request
 
