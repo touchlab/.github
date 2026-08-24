@@ -1,14 +1,9 @@
-<p align="center">
-  <a href="https://touchlab.co">
-    <img src="profile/logo.svg" alt="Touchlab" width="300">
-  </a>
-</p>
+<picture>
+  <source media="(max-width: 850px)" srcset="header-narrow.svg">
+  <img src="header.svg" alt="Touchlab Open Source">
+</picture>
 
-<p align="center">
-  <strong>Shared community defaults for Touchlab's open source repositories.</strong>
-</p>
 
----
 
 ## What this repo is
 
