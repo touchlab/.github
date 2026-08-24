@@ -1,6 +1,6 @@
 <picture>
-  <source media="(max-width: 768px)" srcset="header-narrow.svg">
-  <img src="header.svg" alt="Touchlab Open Source: .github">
+  <source media="(max-width: 800px)" srcset="header-narrow.svg">
+  <img src="header.svg" alt="Touchlab Open Source">
 </picture>
 
 
